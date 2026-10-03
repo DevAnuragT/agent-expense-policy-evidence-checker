@@ -1,0 +1,54 @@
+{
+  "name": "review-expense-policy-evidence-checker",
+  "description": "Run Expense Policy Evidence Checker",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "expense_claims": {
+            "type": "array",
+            "description": "expense claims"
+          },
+          "policy_version": {
+            "type": "string",
+            "description": "policy version"
+          },
+          "approver": {
+            "type": "string",
+            "description": "approver"
+          }
+        },
+        "required": [
+          "expense_claims",
+          "policy_version",
+          "approver"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-expense-policy-evidence-checker.py",
+    "runtime": "python3"
+  }
+}

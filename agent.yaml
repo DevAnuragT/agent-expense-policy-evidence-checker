@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: expense-policy-evidence-checker
+version: 0.1.0
+description: Review claims for receipts, policy version, approver, and exception evidence.
+skills:
+  - expense-policy-evidence-checker-skill
+tools:
+  - review-expense-policy-evidence-checker
+tags:
+  - finance
+  - evidence-driven

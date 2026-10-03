@@ -1,0 +1,24 @@
+{
+  "slug": "expense-policy-evidence-checker",
+  "title": "Expense Policy Evidence Checker",
+  "category": "finance",
+  "description": "Review claims for receipts, policy version, approver, and exception evidence.",
+  "fields": {
+    "expense_claims": {
+      "label": "expense claims",
+      "kind": "list",
+      "minimum": 1
+    },
+    "policy_version": {
+      "label": "policy version",
+      "kind": "required",
+      "minimum": 0
+    },
+    "approver": {
+      "label": "approver",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}
